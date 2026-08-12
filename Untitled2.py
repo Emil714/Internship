@@ -17,7 +17,6 @@ from sklearn.pipeline import Pipeline
 
 df = pd.read_csv("Walmart_Sales.csv")
 
-df.head(10)
 
 
 # In[3]:
@@ -25,21 +24,12 @@ df.head(10)
 
 df1 = df.copy()
 
-df1
+
 
 
 # In[4]:
 
 
-df1.isna().sum()
-
-df1.isna().any().any()
-
-
-# In[5]:
-
-
-df1['Date']
 
 
 # In[6]:
@@ -47,16 +37,11 @@ df1['Date']
 
 df1['Date'] = pd.to_datetime(df1['Date'], format='mixed', dayfirst=True)
 
-df1['Date']
-
-
 # In[7]:
 
 
 df1['year'] = df1['Date'].dt.year
 df1['month'] = df1['Date'].dt.month
-
-df1.head()
 
 
 # In[8]:
